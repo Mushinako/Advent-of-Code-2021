@@ -3,8 +3,10 @@
 Get input from and submit answer to AOC
 """
 
+from __future__ import annotations
+
 from time import sleep
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from string import Template
 from pathlib import Path
@@ -43,19 +45,20 @@ def download_input(day: int, input_path: Path) -> None:
     if day not in _DAY_CHOICES:
         raise ValueError(f"{day=} is not in range 1..25")
     target_time_est = datetime(
-        2021, 12, day - 1, 23, 59, 59, 500_000, tzinfo=ZoneInfo("EST")
-    )
+        2021, 12, day, 23, 59, 59, 500_000, tzinfo=ZoneInfo("EST")
+    ) - timedelta(days=1)
     target_time_local = datetime.fromtimestamp(target_time_est.timestamp())
 
     while (now := datetime.now()) < target_time_local:
         diff = target_time_local - now
         seconds = diff.days * 86400 + diff.seconds
-        print(f"{seconds} seconds until problem opens. Waiting...")
+        if seconds > 3600:
+            print(f"{seconds} seconds until problem opens. Too early...")
+        elif seconds > 1:
+            print(f"{seconds} seconds until problem opens. Waiting...")
         sleep(max(diff.seconds - 1, 1))
 
-    print("Downloading...")
-    for i in range(3):
-        print(f"Try #{i}")
+    for _ in range(3):
         with requests.get(DATA_URL.substitute(day=day), cookies=_COOKIES) as response:
             data = response.content
             if not response.ok:
@@ -89,8 +92,7 @@ def submit_output(day: int, level: Literal[1, 2], answer: str | int) -> None:
     if level not in _LEVEL_CHOICES:
         raise ValueError(f"{level=} is not 1 or 2")
 
-    for i in range(3):
-        print(f"Try #{i}")
+    for _ in range(3):
         with requests.post(
             ANSWER_URL.substitute(day=day),
             {"level": level, "answer": answer},

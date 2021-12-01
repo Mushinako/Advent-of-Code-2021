@@ -1,3 +1,5 @@
 .vscode/
 venv/
 config.yml
+**/input.txt
+**/__pycache__/
