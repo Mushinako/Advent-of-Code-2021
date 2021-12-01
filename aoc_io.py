@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 
 init(autoreset=True)
 
-_CONFIG_PATH = Path(__file__).parent / "config.yml"
+_CONFIG_PATH = Path(__file__).resolve().parent / "config.yml"
 with _CONFIG_PATH.open("r") as f:
     _CONFIG = yaml.safe_load(f)
 
@@ -33,7 +33,7 @@ _DAY_CHOICES = set(range(1, 26))
 _LEVEL_CHOICES = {1, 2}
 
 
-def get_input(day: int, input_path: Path) -> None:
+def download_input(day: int, input_path: Path) -> None:
     """
     Download input from AOC website
     Args:
