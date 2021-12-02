@@ -1,4 +1,4 @@
-# Day 01
+# Day 01 (Sonar Sweep)
 
 ## Level 1
 

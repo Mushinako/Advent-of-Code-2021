@@ -18,7 +18,11 @@ def day_02(level: Literal[1, 2]) -> None:
     """"""
     download_input(2, INPUT_PATH)
     with INPUT_PATH.open("r") as f:
-        data = ...
+        data: list[tuple[str, int]] = []
+        for line in f:
+            if line:
+                a, b = line.split()
+                data.append((a.lower(), int(b)))
 
     result = day_02_level_1(data) if level == 1 else day_02_level_2(data)
 
