@@ -4,9 +4,9 @@
 from __future__ import annotations
 
 
-def day_02_level_2(data: list[tuple[str, int]]) -> int:
+def solution(data: list[tuple[str, int]]) -> int:
     """
-    Day 02 level 2 solution.
+    Day 02 part 2 solution.
     """
     hori = depth = aim = 0
     for direction, distance in data:

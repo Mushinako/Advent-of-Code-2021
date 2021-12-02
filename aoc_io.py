@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from colorama import Fore, init
 
 if TYPE_CHECKING:
-    from typing import Literal
+    from typing import Literal, Optional
 
 init(autoreset=True)
 
@@ -35,9 +35,23 @@ _DAY_CHOICES = set(range(1, 26))
 _LEVEL_CHOICES = {1, 2}
 
 
-def download_input(day: int, input_path: Path) -> None:
+def get_input_path(day: int) -> Path:
     """
-    Download input from AOC website
+    Get the path of the file the input data is downloaded into.
+
+    Args:
+        day (1..25): The day of AOC
+
+    Returns:
+        (pathlib.Path): Path of the input data file
+    """
+    return Path(__file__).resolve().parent / f"day_{day:>02}" / "input.txt"
+
+
+def download_input(day: int, input_path: Optional[Path] = None) -> None:
+    """
+    Download input from AOC website.
+
     Args:
         day        (1..25)       : The day of AOC
         input_path (pathlib.Path): Path of file to write input to
@@ -73,29 +87,33 @@ def download_input(day: int, input_path: Path) -> None:
         Fore.GREEN
         + f"Got input with {len(data)} characters and {len(data.splitlines())} lines"
     )
+    if input_path is None:
+        input_path = get_input_path(day)
     with input_path.open("wb") as input_fp:
         input_fp.write(data)
 
 
-def submit_output(day: int, level: Literal[1, 2], answer: str | int) -> None:
+def submit_output(day: int, part: Literal[1, 2], answer: str | int) -> None:
     """
     Upload solution to AOC website
+
     Args:
         day    (1..25)    : The day of AOC
-        level  (1, 2)     : Whether the submission is for part 1 or 2
+        part   (1, 2)     : Whether the submission is for part 1 or 2
         answer (str | int): Answer to be submitted
+
     Returns:
         (str): Success/failure string, with coloring
     """
     if day not in _DAY_CHOICES:
         raise ValueError(f"{day=} is not in range 1..25")
-    if level not in _LEVEL_CHOICES:
-        raise ValueError(f"{level=} is not 1 or 2")
+    if part not in _LEVEL_CHOICES:
+        raise ValueError(f"{part=} is not 1 or 2")
 
     for _ in range(3):
         with requests.post(
             ANSWER_URL.substitute(day=day),
-            {"level": level, "answer": answer},
+            {"level": part, "answer": answer},
             cookies=_COOKIES,
         ) as response:
             data = response.content
