@@ -1,6 +1,6 @@
 # Day 02 (Dive!)
 
-## Level 1
+## Part 1
 
 Implementation! Do what the problem says!
 
@@ -19,7 +19,7 @@ for direction, distance in data:
 print(hori * depth)
 ```
 
-## Level 2
+## Part 2
 
 Slightly different implementation!
 

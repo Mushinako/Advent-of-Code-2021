@@ -6,18 +6,19 @@ My solutions to [Advent of Code 2021](https://adventofcode.com/2021)
 
 ### By Day
 
-|       Day        | Level 1 Rank | Level 2 Rank |
-| :--------------: | :----------: | :----------: |
-| 01 (Sonar Sweep) |     3602     |     2000     |
-|    02 (Dive!)    |     2719     |     1438     |
+| Day                    | Level 1 Rank | Level 2 Rank |
+| :--------------------- | :----------: | :----------: |
+| 01 (Sonar Sweep)       |     3602     |     2000     |
+| 02 (Dive!)             |     2719     |     1438     |
+| 03 (Binary Diagnostic) |     2266     |     372      |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |  Score   |    Rank     |
 | :---------- | :------: | :---------: |
 | Worldwide   |  **0**   | **unknown** |
-| PyDis       | **2980** |   **41**    |
-| PyDis Staff | **217**  |   **10**    |
+| PyDis       | **4700** |   **19**    |
+| PyDis Staff | **339**  |    **4**    |
 
 ## How to Use this Repo?
 
@@ -31,5 +32,6 @@ My solutions to [Advent of Code 2021](https://adventofcode.com/2021)
    ```
 
 2. Create a virtual environment and install the dependencies in `requirements.txt`
-3. To download an input, run `python run.py dl <day>`
-4. To submit answer for part 1/2, run `python run.py sub <day> 1|2`
+3. To download an input, run `python run.py d <day>`
+4. To print calculated result for part 1/2, run `python run.py p <day> 1|2`
+5. To submit calculated result for part 1/2, run `python run.py s <day> 1|2`

@@ -65,19 +65,17 @@ def download_input(day: int, input_path: Optional[Path] = None) -> None:
 
     while (now := datetime.now()) < target_time_local:
         diff = target_time_local - now
-        seconds = diff.days * 86400 + diff.seconds
-        if seconds > 3600:
-            print(f"{seconds} seconds until problem opens. Too early...")
-        elif seconds > 1:
-            print(f"{seconds} seconds until problem opens. Waiting...")
-        sleep(max(diff.seconds - 1, 1))
+        seconds = max(diff.days * 86400 + diff.seconds, 0)
+        print(f"\r\x1b[K{seconds} seconds until problem opens. Waiting...", end="")
+        sleep(1)
+    print("\r\x1b[K", end="")
 
     for _ in range(3):
         with requests.get(DATA_URL.substitute(day=day), cookies=_COOKIES) as response:
             data = response.content
             if not response.ok:
                 print(Fore.RED + data.decode("utf-8").strip())
-                sleep(1)
+                sleep(5)
                 continue
             break
     else:

@@ -1,6 +1,6 @@
 # Day 01 (Sonar Sweep)
 
-## Level 1
+## Part 1
 
 This question can be brute forced: iterate through the list, and compare it with the
 next element, and count the number of occurrences where the next number is larger than
@@ -79,7 +79,7 @@ print(sum(data[i + 1] > data[i] for i in range(len(data) - 1)))
 print(sum(next_ > prev for prev, next_ in zip(data[:-1], data[1:])))
 ```
 
-## Level 2
+## Part 2
 
 The brute force way is to sum up all length-3 sliding windows and comparing them, but
 that's no fun. One crucial discovery is that when comparing the windows, 2 of them can

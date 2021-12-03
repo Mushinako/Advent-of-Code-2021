@@ -1,5 +1,5 @@
 # Day xx (XXX)
 
-## Level 1
+## Part 1
 
-## Level 2
+## Part 2
