@@ -11,14 +11,15 @@ My solutions to [Advent of Code 2021](https://adventofcode.com/2021)
 | 01 (Sonar Sweep)       |     3602     |     2000     |
 | 02 (Dive!)             |     2719     |     1438     |
 | 03 (Binary Diagnostic) |     2266     |     372      |
+| 04 (Giant Squid)       |     642      |     763      |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |  Score   |    Rank     |
 | :---------- | :------: | :---------: |
 | Worldwide   |  **0**   | **unknown** |
-| PyDis       | **4700** |   **19**    |
-| PyDis Staff | **339**  |    **4**    |
+| PyDis       | **6466** |   **19**    |
+| PyDis Staff | **467**  |    **5**    |
 
 ## How to Use this Repo?
 
