@@ -2,24 +2,28 @@
 
 My solutions to [Advent of Code 2021](https://adventofcode.com/2021)
 
+**SPOILER ALERT:** This repository contains contest solutions. The solutions will be
+uploaded at least 30 minutes after the start of each day's contest.
+
 ## Stats
 
 ### By Day
 
-| Day                    | Level 1 Rank | Level 2 Rank |
-| :--------------------- | :----------: | :----------: |
-| 01 (Sonar Sweep)       |     3602     |     2000     |
-| 02 (Dive!)             |     2719     |     1438     |
-| 03 (Binary Diagnostic) |     2266     |     372      |
-| 04 (Giant Squid)       |     642      |     763      |
+| Day                       | Level 1 Rank | Level 2 Rank |
+| :------------------------ | :----------: | :----------: |
+| 01 (Sonar Sweep)          |     3602     |     2000     |
+| 02 (Dive!)                |     2719     |     1438     |
+| 03 (Binary Diagnostic)    |     2266     |     372      |
+| 04 (Giant Squid)          |     642      |     763      |
+| 05 (Hydrothermal Venture) |     506      |     418      |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |  Score   |    Rank     |
 | :---------- | :------: | :---------: |
 | Worldwide   |  **0**   | **unknown** |
-| PyDis       | **6466** |   **19**    |
-| PyDis Staff | **467**  |    **5**    |
+| PyDis       | **8380** |   **13**    |
+| PyDis Staff | **584**  |    **6**    |
 
 ## How to Use this Repo?
 
