@@ -4,10 +4,12 @@
 from __future__ import annotations
 
 import argparse
+import webbrowser
 from importlib import import_module
 
 from aoc_io import download_input, submit_output
 
+_PREPARATION_COMMANDS = {"e", "er", "prepare"}
 _DOWNLOAD_COMMANDS = {"d", "dl", "download"}
 _PRINT_COMMANDS = {"p", "pr", "print"}
 _SUBMIT_COMMANDS = {"s", "sub", "submit"}
@@ -21,6 +23,12 @@ def _main() -> None:
     parser.add_argument("day", type=int, choices=range(1, 26))
     parser.add_argument("part", type=int, choices=(1, 2), nargs="?")
     args = parser.parse_args()
+
+    # Prepare
+    if args.command in _PREPARATION_COMMANDS:
+        webbrowser.open("https://adventofcode.com/2021")
+        download_input(day=args.day)
+        return
 
     # Download input
     if args.command in _DOWNLOAD_COMMANDS:

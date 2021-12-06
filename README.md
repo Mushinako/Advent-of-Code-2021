@@ -16,14 +16,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 03 (Binary Diagnostic)    |     2266     |     372      |
 | 04 (Giant Squid)          |     642      |     763      |
 | 05 (Hydrothermal Venture) |     506      |     418      |
+| 06 (Lanternfish)          |     787      |     105      |
 
 ### By Leaderboard (after Day 02)
 
-| Leaderboard |  Score   |    Rank     |
-| :---------- | :------: | :---------: |
-| Worldwide   |  **0**   | **unknown** |
-| PyDis       | **8380** |   **13**    |
-| PyDis Staff | **584**  |    **6**    |
+| Leaderboard |   Score   |    Rank     |
+| :---------- | :-------: | :---------: |
+| Worldwide   |   **0**   | **unknown** |
+| PyDis       | **10307** |    **9**    |
+| PyDis Staff |  **709**  |    **5**    |
 
 ## How to Use this Repo?
 
