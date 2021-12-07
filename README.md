@@ -9,22 +9,23 @@ uploaded at least 30 minutes after the start of each day's contest.
 
 ### By Day
 
-| Day                       | Level 1 Rank | Level 2 Rank |
-| :------------------------ | :----------: | :----------: |
-| 01 (Sonar Sweep)          |     3602     |     2000     |
-| 02 (Dive!)                |     2719     |     1438     |
-| 03 (Binary Diagnostic)    |     2266     |     372      |
-| 04 (Giant Squid)          |     642      |     763      |
-| 05 (Hydrothermal Venture) |     506      |     418      |
-| 06 (Lanternfish)          |     787      |     105      |
+| Day                          | Level 1 Rank | Level 2 Rank |
+| :--------------------------- | :----------: | :----------: |
+| 01 (Sonar Sweep)             |     3602     |     2000     |
+| 02 (Dive!)                   |     2719     |     1438     |
+| 03 (Binary Diagnostic)       |     2266     |     372      |
+| 04 (Giant Squid)             |     642      |     763      |
+| 05 (Hydrothermal Venture)    |     506      |     418      |
+| 06 (Lanternfish)             |     787      |     105      |
+| 07 (The Treachery of Whales) |     1207     |     421      |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **10307** |    **9**    |
-| PyDis Staff |  **709**  |    **5**    |
+| PyDis       | **12109** |   **12**    |
+| PyDis Staff |  **828**  |    **4**    |
 
 ## How to Use this Repo?
 
