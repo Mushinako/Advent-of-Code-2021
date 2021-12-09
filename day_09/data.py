@@ -12,12 +12,12 @@ if TYPE_CHECKING:
     from typing import Optional
 
 
-def process_data(path: Optional[Path] = None) -> ...:
+def process_data(path: Optional[Path] = None) -> list[list[int]]:
     """
     Process day 09 data.
     """
     if path is None:
         path = get_input_path(9)
     with path.open("r") as f:
-        data = ...
+        data = [[int(n) for n in d] for line in f if (d := line.strip())]
     return data

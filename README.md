@@ -19,14 +19,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 06 (Lanternfish)             |     787      |     105      |
 | 07 (The Treachery of Whales) |     1207     |     421      |
 | 08 (Seven Segment Search)    |     681      |     733      |
+| 09 (Smoke Basin)             |     1712     |     1571     |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **14010** |   **10**    |
-| PyDis Staff |  **952**  |    **3**    |
+| PyDis       | **15804** |   **10**    |
+| PyDis Staff | **1070**  |    **3**    |
 
 ## How to Use this Repo?
 
