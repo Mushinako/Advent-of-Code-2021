@@ -13,13 +13,14 @@ _PREPARATION_COMMANDS = {"e", "er", "prepare"}
 _DOWNLOAD_COMMANDS = {"d", "dl", "download"}
 _PRINT_COMMANDS = {"p", "pr", "print"}
 _SUBMIT_COMMANDS = {"s", "sub", "submit"}
+_ALL_COMMANDS = (
+    _PREPARATION_COMMANDS | _DOWNLOAD_COMMANDS | _PRINT_COMMANDS | _SUBMIT_COMMANDS
+)
 
 
 def _main() -> None:
     parser = argparse.ArgumentParser(description="AoC 2021 day 01")
-    parser.add_argument(
-        "command", choices=_DOWNLOAD_COMMANDS | _PRINT_COMMANDS | _SUBMIT_COMMANDS
-    )
+    parser.add_argument("command", choices=_ALL_COMMANDS)
     parser.add_argument("day", type=int, choices=range(1, 26))
     parser.add_argument("part", type=int, choices=(1, 2), nargs="?")
     args = parser.parse_args()

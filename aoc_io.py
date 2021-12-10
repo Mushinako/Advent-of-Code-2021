@@ -58,9 +58,8 @@ def download_input(day: int, input_path: Optional[Path] = None) -> None:
     """
     if day not in _DAY_CHOICES:
         raise ValueError(f"{day=} is not in range 1..25")
-    target_time_est = datetime(
-        2021, 12, day, 23, 59, 59, 500_000, tzinfo=ZoneInfo("EST")
-    ) - timedelta(days=1)
+    # One extra second just to be sure
+    target_time_est = datetime(2021, 12, day, 0, 0, 1, tzinfo=ZoneInfo("EST"))
     target_time_local = datetime.fromtimestamp(target_time_est.timestamp())
 
     while (now := datetime.now()) < target_time_local:
