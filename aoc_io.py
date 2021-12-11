@@ -6,7 +6,7 @@ Get input from and submit answer to AOC
 from __future__ import annotations
 
 from time import sleep
-from datetime import datetime, timedelta
+from datetime import datetime
 from zoneinfo import ZoneInfo
 from string import Template
 from pathlib import Path
@@ -16,6 +16,8 @@ import requests
 import yaml
 from bs4 import BeautifulSoup
 from colorama import Fore, init
+
+from utils import get_input_path
 
 if TYPE_CHECKING:
     from typing import Literal, Optional
@@ -33,19 +35,6 @@ _COOKIES = _CONFIG["cookies"]
 
 _DAY_CHOICES = set(range(1, 26))
 _LEVEL_CHOICES = {1, 2}
-
-
-def get_input_path(day: int) -> Path:
-    """
-    Get the path of the file the input data is downloaded into.
-
-    Args:
-        day (1..25): The day of AOC
-
-    Returns:
-        (pathlib.Path): Path of the input data file
-    """
-    return Path(__file__).resolve().parent / f"day_{day:>02}" / "input.txt"
 
 
 def download_input(day: int, input_path: Optional[Path] = None) -> None:

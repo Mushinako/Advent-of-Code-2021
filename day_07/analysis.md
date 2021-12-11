@@ -33,7 +33,8 @@ print(sum(abs(n - median_) for n in data))
 
 ## Part 2
 
-Similar to part 1; can be brute forced:
+Similar to part 1; can be brute forced, while utilizing [the formula][1] for adding
+consecutive numbers:
 
 ```py
 from math import inf
@@ -50,3 +51,5 @@ print(min_fuel)
 
 This can also be solved somewhat similarly to the median method, but it isn't worth it
 given the time constraint.
+
+[1]: https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF

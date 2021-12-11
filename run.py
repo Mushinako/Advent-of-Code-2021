@@ -6,8 +6,12 @@ from __future__ import annotations
 import argparse
 import webbrowser
 from importlib import import_module
+from typing import TYPE_CHECKING
 
 from aoc_io import download_input, submit_output
+
+if TYPE_CHECKING:
+    from .utils import SolutionAbstract
 
 _PREPARATION_COMMANDS = {"e", "er", "prepare"}
 _DOWNLOAD_COMMANDS = {"d", "dl", "download"}
@@ -49,12 +53,15 @@ def _main() -> None:
 def _get_solution(day: int, part: int) -> str | int:
     """"""
     dir_name = f"day_{day:>02}"
-    data_module = import_module(f"{dir_name}.data")
-    data_func = getattr(data_module, "process_data")
-    data = data_func()
-    solution_module = import_module(f"{dir_name}.part_{part}")
-    solution_func = getattr(solution_module, "solution")
-    return solution_func(data)
+    solution_module = import_module(f"{dir_name}.solution")
+    SolutionClass: type[SolutionAbstract] = getattr(solution_module, "Solution")
+    solution_obj = SolutionClass()
+    if part == 1:
+        return solution_obj.part_1()
+    elif part == 2:
+        return solution_obj.part_2()
+    else:
+        raise ValueError(f"Unknown part number {part}.")
 
 
 if __name__ == "__main__":

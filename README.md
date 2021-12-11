@@ -21,14 +21,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 08 (Seven Segment Search)    |     681      |     733      |
 | 09 (Smoke Basin)             |     1712     |     1571     |
 | 10 (Syntax Scoring)          |     599      |     466      |
+| 11 (Dumbo Octopus)           |     1762     |     1553     |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **17675** |   **11**    |
-| PyDis Staff | **1190**  |    **5**    |
+| PyDis       | **19469** |   **12**    |
+| PyDis Staff | **1306**  |    **5**    |
 
 ## How to Use this Repo?
 
