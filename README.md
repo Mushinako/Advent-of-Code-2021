@@ -22,6 +22,7 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 09 (Smoke Basin)             |     1712     |     1571     |
 | 10 (Syntax Scoring)          |     599      |     466      |
 | 11 (Dumbo Octopus)           |     1762     |     1553     |
+| 12 (Passage Pathing)         |     721      |     1779     |
 
 ### By Leaderboard (after Day 02)
 
@@ -29,7 +30,7 @@ uploaded at least 30 minutes after the start of each day's contest.
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
 | PyDis       | **19469** |   **12**    |
-| PyDis Staff | **1306**  |    **5**    |
+| PyDis Staff | **1400**  |    **5**    |
 
 ## How to Use this Repo?
 
