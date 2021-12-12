@@ -29,7 +29,7 @@ uploaded at least 30 minutes after the start of each day's contest.
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **19469** |   **12**    |
+| PyDis       | **21283** |   **13**    |
 | PyDis Staff | **1400**  |    **5**    |
 
 ## How to Use this Repo?
