@@ -8,10 +8,14 @@ import webbrowser
 from importlib import import_module
 from typing import TYPE_CHECKING
 
+from colorama import Fore, init
+
 from aoc_io import download_input, submit_output
 
 if TYPE_CHECKING:
     from .utils import SolutionAbstract
+
+init(autoreset=True)
 
 _PREPARATION_COMMANDS = {"e", "er", "prepare"}
 _DOWNLOAD_COMMANDS = {"d", "dl", "download"}
@@ -44,9 +48,13 @@ def _main() -> None:
     if args.part is None:
         raise ValueError("No part number provided.")
     solution = _get_solution(args.day, args.part)
+    if solution is None:
+        print(Fore.RED + "No response got. This part may need manual processing.")
+        return
     if args.command in _PRINT_COMMANDS:
-        print(f"Got solution {solution!r}")
+        print(Fore.GREEN + f"Got solution {solution!r}")
     elif args.command in _SUBMIT_COMMANDS:
+        print(Fore.GREEN + f"Got solution {solution!r}")
         submit_output(day=args.day, part=args.part, answer=solution)
 
 

@@ -23,14 +23,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 10 (Syntax Scoring)          |     599      |     466      |
 | 11 (Dumbo Octopus)           |     1762     |     1553     |
 | 12 (Passage Pathing)         |     721      |     1779     |
+| 13 (Transparent Origami)     |     628      |     667      |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **21283** |   **13**    |
-| PyDis Staff | **1400**  |    **5**    |
+| PyDis       | **23124** |   **10**    |
+| PyDis Staff | **1551**  |    **5**    |
 
 ## How to Use this Repo?
 
