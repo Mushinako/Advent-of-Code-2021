@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import argparse
+import shutil
 import webbrowser
 from importlib import import_module
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from colorama import Fore, init
@@ -35,6 +37,19 @@ def _main() -> None:
 
     # Prepare
     if args.command in _PREPARATION_COMMANDS:
+        parent_dir = Path(__file__).resolve().parent
+        target_dir = parent_dir / f"day_{args.day:>02}"
+        if not target_dir.exists():
+            origin_dir = parent_dir / "day_xx"
+            shutil.copytree(origin_dir, target_dir)
+        for subpath in target_dir.iterdir():
+            if subpath.suffix not in {".md", ".py"}:
+                continue
+            with subpath.open("r") as f:
+                data = f.read()
+            data = data.replace("xx", f"{args.day:>02}").replace("-1", str(args.day))
+            with subpath.open("w") as f:
+                f.write(data)
         webbrowser.open("https://adventofcode.com/2021")
         download_input(day=args.day)
         return

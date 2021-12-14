@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 
 class Solution(SolutionAbstract):
-    day = 0
+    day = -1
     data: _Data
 
     @staticmethod
