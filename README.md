@@ -24,14 +24,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 11 (Dumbo Octopus)           |     1762     |     1553     |
 | 12 (Passage Pathing)         |     721      |     1779     |
 | 13 (Transparent Origami)     |     628      |     667      |
+| 14 (Extended Polymerization) |     379      |     2804     |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **23124** |   **10**    |
-| PyDis Staff | **1551**  |    **5**    |
+| PyDis       | **25015** |   **13**    |
+| PyDis Staff | **1669**  |    **5**    |
 
 ## How to Use this Repo?
 
