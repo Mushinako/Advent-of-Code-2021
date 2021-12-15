@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING
 from utils import SolutionAbstract
 
 if TYPE_CHECKING:
-    _Data = type
+    _Data = type(None)
 
 
 class Solution(SolutionAbstract):

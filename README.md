@@ -25,13 +25,14 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 12 (Passage Pathing)         |     721      |     1779     |
 | 13 (Transparent Origami)     |     628      |     667      |
 | 14 (Extended Polymerization) |     379      |     2804     |
+| 15 (Chiton)                  |     3920     |     2898     |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **25015** |   **13**    |
+| PyDis       | **26939** |   **13**    |
 | PyDis Staff | **1669**  |    **5**    |
 
 ## How to Use this Repo?
