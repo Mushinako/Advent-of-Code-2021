@@ -41,7 +41,10 @@ class Solution(SolutionAbstract):
         """
         Generic solution.
         """
-        # visited: set[_Coord] = set()
+        # Keep track of all the visited nodes
+        visited: set[_Coord] = set()
+        # Initiate the cave distances from start point. Set everywhere to infinity,
+        #   except the start point, which has a value of 0
         distances: dict[_Coord, int | float] = {
             (r, c): math.inf
             for r in range(cave.last_row + 1)
@@ -50,16 +53,22 @@ class Solution(SolutionAbstract):
         distances[(0, 0)] = 0
         target_coord = (cave.last_row, cave.last_col)
 
+        # A heap is used so that we can get calculate the unvisited node with the
+        #   smallest distance from start point first
         priority_queue: list[tuple[int, _Coord]] = [(0, (0, 0))]
-        while priority_queue:
-            # if target_coord in visited:
-            #     break
+        while target_coord not in visited:
             distance, coord = heapq.heappop(priority_queue)
-            # if coord in visited:
-            #     continue
+            # No need to check a visied node twice
+            if coord in visited:
+                continue
+            # This probably will never happen, because we already visited all the nodes
+            #   with a smaller distance (because of `heappop`). Nevertheless, still nice
+            #   to do it as a sanity check
             if distance > distances[coord]:
                 continue
+
             r, c = coord
+            # Get all possible nodes to go to
             valid_next_coords: set[_Coord] = set()
             if r != 0:
                 valid_next_coords.add((r - 1, c))
@@ -69,19 +78,28 @@ class Solution(SolutionAbstract):
                 valid_next_coords.add((r, c - 1))
             if c != cave.last_col:
                 valid_next_coords.add((r, c + 1))
-            for new_r, new_c in valid_next_coords:
-                new_distance = distance + cave[(new_r, new_c)]
-                new_coord = (new_r, new_c)
+
+            for new_coord in valid_next_coords:
+                new_distance = distance + cave[new_coord]
+                # Skip if we already have a shorter distance
                 if new_distance >= distances[new_coord]:
                     continue
+                # Record the lowest distance
                 distances[new_coord] = new_distance
+                # Queue the neighbors for visiting
                 heapq.heappush(priority_queue, (new_distance, new_coord))
-            # visited.add(coord)
+            # Mark current node as visited
+            visited.add(coord)
+
         # Makes linter happy
         return int(distances[target_coord])
 
 
 class _Cave:
+    """
+    Custom 2D cave map that supports the duplication of original cave map.
+    """
+
     def __init__(self, data: list[list[int]], r_dup: int, c_dup: int) -> None:
         self._data = data
         self._data_row_count = len(data)
@@ -113,6 +131,9 @@ class _Cave:
             raise IndexError("The first coordinate is out of range.")
         if c >= self.col_count:
             raise IndexError("The second coordinate is out of range.")
+
+        # Get the position in the original map, and add offset for row and column, and
+        #   wrap overflows
         return (
             self._data[r % self._data_row_count][c % self._data_col_count]
             + r // self._data_row_count

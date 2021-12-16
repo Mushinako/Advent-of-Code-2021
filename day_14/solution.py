@@ -49,12 +49,18 @@ class Solution(SolutionAbstract):
         """
         General solution.
         """
+        # Record initial condition. Map each rule to the number of occurrences in the
+        #   template
         counts = {position: 0 for position in self.rules}
         for i in range(len(self.template) - 1):
             counts[self.template[i : i + 2]] += 1
+        # Run required number of steps
         for _ in range(step_count):
             counts = self._run_step(counts)
+        # Get count for each character
         char_counts = self._get_char_counts(counts)
+        # Sort to get the largest and smallest. Reversed only to mimic the behavior of
+        #   `collections.Counter.most_common`
         counts_list = sorted(char_counts.items(), key=itemgetter(1), reverse=True)
         return counts_list[0][1] - counts_list[-1][1]
 
@@ -62,6 +68,8 @@ class Solution(SolutionAbstract):
         """
         Run one step.
         """
+        # `AB -> C` means `AB` becomes `AC` and `CB`. If we had *n* groups of `AB`
+        #   before, we should expect *n* groups of `AC` and *n* groups of `CB`
         new_counts = {position: 0 for position in counts}
         for position, count in counts.items():
             value = self.rules.get(position)
@@ -81,8 +89,10 @@ class Solution(SolutionAbstract):
         for position, count in pair_counts.items():
             char_counts[position[0]] += count
             char_counts[position[1]] += count
+        # Add the first and last character because they're not double counted
         char_counts[self.template[0]] += 1
         char_counts[self.template[-1]] += 1
+        # Sanity check
         for char, count in char_counts.items():
             if count % 2:
                 raise ValueError(f"{char!r} does not have an even count: {count}.")
