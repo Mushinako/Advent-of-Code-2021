@@ -27,14 +27,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 14 (Extended Polymerization) |     379      |     2804     |
 | 15 (Chiton)                  |     3920     |     2898     |
 | 16 (Packet Decoder)          |     1212     |     954      |
+| 17 (Trick Shot)              |     129      |     2436     |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **28898** |   **12**    |
-| PyDis Staff | **1908**  |    **2**    |
+| PyDis       | **30690** |   **12**    |
+| PyDis Staff | **2031**  |    **2**    |
 
 ## How to Use this Repo?
 
