@@ -55,7 +55,16 @@ print(y_depth * (y_depth - 1) // 2)
 
 Again here we can consider x- and y-axes independently.
 
-TODO (Anyone who reads this remind me to fill this in later. Thx)
+We can categorize possible initial x-speeds into 2 groups:
+
+1. Those that got reduced to 0 when it reaches the target area due to drag
+2. Those that did not get reduced to 0
+
+For the first group, as long as the number of steps required on the y-axis is no less
+than the number of steps required on the x-axis, it'll hit the target area because the
+x-axis speed is reduced to 0 thereafter and will stay within the x-axis range.
+
+For the second group, we need to match the number of steps on the x- and y-axes.
 
 ```py
 (x_min, x_max), (y_min, y_max) = self.data

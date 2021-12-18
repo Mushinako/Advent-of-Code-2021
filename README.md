@@ -28,14 +28,15 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 15 (Chiton)                  |     3920     |     2898     |
 | 16 (Packet Decoder)          |     1212     |     954      |
 | 17 (Trick Shot)              |     129      |     2436     |
+| 18 (Snailfish)               |     1033     |     1200     |
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **30690** |   **12**    |
-| PyDis Staff | **2031**  |    **2**    |
+| PyDis       | **32521** |   **10**    |
+| PyDis Staff | **2156**  |    **1**    |
 
 ## How to Use this Repo?
 
