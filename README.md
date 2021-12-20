@@ -29,14 +29,20 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 16 (Packet Decoder)          |     1212     |     954      |
 | 17 (Trick Shot)              |     129      |     2436     |
 | 18 (Snailfish)               |     1033     |     1200     |
+| 19 (???)*                    |              |              |
+| 20 ()                        |     255      |     263      |
+
+\* Got other things to attend to. Haven't done yet.
 
 ### By Leaderboard (after Day 02)
 
 | Leaderboard |   Score   |    Rank     |
 | :---------- | :-------: | :---------: |
 | Worldwide   |   **0**   | **unknown** |
-| PyDis       | **32521** |   **10**    |
-| PyDis Staff | **2156**  |    **1**    |
+| PyDis       | **32521** |             |
+| PyDis Staff | **2282**  |   **~3**    |
+
+\* Rankings for PyDis and PyDis staff are estimates because I didn't do Day 19.
 
 ## How to Use this Repo?
 

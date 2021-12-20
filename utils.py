@@ -21,11 +21,7 @@ class SolutionAbstract(ABC):
     def _get_raw_data(self) -> list[str]:
         path = get_input_path(self.day)
         with path.open("r") as f:
-            return [
-                d
-                for line in f.readlines()
-                if (d := line.strip()) and not d.startswith("#")
-            ]
+            return [d for line in f.readlines() if (d := line.strip())]
 
     @staticmethod
     @abstractmethod
