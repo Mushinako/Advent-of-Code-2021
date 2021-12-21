@@ -31,18 +31,19 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 18 (Snailfish)               |     1033     |     1200     |
 | 19 (???)*                    |              |              |
 | 20 ()                        |     255      |     263      |
+| 21 ()                        |     546      |     1058     |
 
 \* Got other things to attend to. Haven't done yet.
 
 ### By Leaderboard (after Day 02)
 
-| Leaderboard |   Score   |    Rank     |
-| :---------- | :-------: | :---------: |
-| Worldwide   |   **0**   | **unknown** |
-| PyDis       | **32521** |             |
-| PyDis Staff | **2282**  |   **~3**    |
+| Leaderboard |    Score    |    Rank     |
+| :---------- | :---------: | :---------: |
+| Worldwide   |    **0**    | **unknown** |
+| PyDis       | **38074\*** |  **13\***   |
+| PyDis Staff | **2501\***  |   **4\***   |
 
-\* Rankings for PyDis and PyDis staff are estimates because I didn't do Day 19.
+\* Score & rankings for PyDis and PyDis staff are estimates because I didn't do Day 19.
 
 ## How to Use this Repo?
 
