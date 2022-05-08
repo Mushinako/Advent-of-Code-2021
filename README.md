@@ -34,7 +34,7 @@ uploaded at least 30 minutes after the start of each day's contest.
 | 21 (Dirac Dics)              |     546      |     1058     | Analysis TBD                                         |
 | 22 (Reactor Reboot)          |     1020     |     9160     | Inefficient solution                                 |
 | 23 (Amphipod)                |      13      |     1254     | Inefficient solution; Part 1 originally done by hand |
-| 24 (Arithmetic Logic Unit)   |     1177     |     1073     | Inefficent solution; Originally done by hand         |
+| 24 (Arithmetic Logic Unit)   |     1177     |     1073     | Inefficient solution; Originally done by hand         |
 | 25 (Sea Cucumber)            |     906      |     789      | Analysis TBD                                         |
 
 ### By Leaderboard (after Day 02)
